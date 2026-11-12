@@ -14,6 +14,10 @@ Export `event_id,service,severity` in that order. Normalize severity to `critica
 
 Run `make verify` with Make and Python 3 installed. The target runs the documented sample through the project CLI.
 
+## Business problem
+
+An exported alert stream can repeat events and bury the highest-severity service. Responders need a deduplicated queue for review.
+
 ## Project walkthrough
 
 ```mermaid

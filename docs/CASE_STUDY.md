@@ -2,7 +2,7 @@
 
 ## Business problem
 
-Turn exported alert rows into a prioritized on-call review queue. Exact duplicates count once. Conflicting event IDs fail the run.
+An exported alert stream can repeat events and bury the highest-severity service. Responders need a deduplicated queue for review.
 
 ## Reproduce the workflow
 
