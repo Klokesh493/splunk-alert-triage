@@ -1,0 +1,5 @@
+event_id,service,severity
+evt-01,checkout,critical
+evt-02,checkout,warning
+evt-03,catalog,info
+evt-01,checkout,critical
