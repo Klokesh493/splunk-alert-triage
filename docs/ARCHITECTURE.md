@@ -4,11 +4,14 @@ Turn exported alert rows into a prioritized on-call review queue. Exact duplicat
 
 ```mermaid
 flowchart LR
-    N0["example.csv"]
-    N1["triage.py"]
-    N2["Deduplicate event IDs and prioritize services by highest observed severity."]
-    N3["Result for operator review"]
-    N0 --> N1 --> N2 --> N3
+    A["Exported Splunk alert CSV"]
+    B["Validate rows, deduplicate IDs, and count severity per service"]
+    C["Highest severity determines queue"]
+    D["Page for critical"]
+    E["Review for warning or observe for info"]
+    A --> B --> C
+    C --> D
+    C --> E
 ```
 
 ## Operational boundaries

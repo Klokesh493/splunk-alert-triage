@@ -16,4 +16,16 @@ Run `make verify` with Make and Python 3 installed. The target runs the document
 
 ## Project walkthrough
 
+```mermaid
+flowchart LR
+    A["Exported Splunk alert CSV"]
+    B["Validate rows, deduplicate IDs, and count severity per service"]
+    C["Highest severity determines queue"]
+    D["Page for critical"]
+    E["Review for warning or observe for info"]
+    A --> B --> C
+    C --> D
+    C --> E
+```
+
 [Architecture and data flow](docs/ARCHITECTURE.md) · [Business problem, demo, and verification](docs/CASE_STUDY.md)
