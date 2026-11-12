@@ -42,8 +42,7 @@ def main():
                 raise ValueError("expected CSV headers event_id,service,severity")
             print(json.dumps(summarize(reader), indent=2))
     except (OSError, ValueError, csv.Error) as exc:
-        parser.exit(2, f"Input error: {exc}
-")
+        parser.exit(2, f"Input error: {exc}\n")
 
 
 if __name__ == "__main__":
