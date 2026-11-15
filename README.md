@@ -2,6 +2,8 @@
 
 An exported alert stream can repeat events and bury the highest-severity service. Responders need a deduplicated queue for review.
 
+[Skills and verification](docs/ENGINEERING_NOTES.md)
+
 ## What I built
 
 I built an offline triage CLI for exported Splunk alerts. It validates event ID, service, and severity, counts exact duplicates once, rejects conflicting duplicate IDs, and groups remaining events into page, review, or observe queues.
